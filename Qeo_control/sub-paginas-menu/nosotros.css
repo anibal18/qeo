@@ -1,0 +1,730 @@
+@font-face {
+    font-family: "hind-bold";
+    src: url("../fuentes/Hind/Hind-Bold.ttf") ;
+}
+
+@font-face {
+    font-family: "hind-regular";
+    src: url("../fuentes/Hind/Hind-Regular.ttf") ;
+}
+
+@font-face {
+    font-family: "hind-light";
+    src: url("../fuentes/Hind/Hind-Light.ttf") ;
+}
+
+*{
+    margin: 0;
+    padding: 0;
+    outline: none;
+}
+
+html{
+    width: 100%;
+    height: fit-content;
+    font-family: "hind-light";
+}
+body{
+    width: 100%;
+    height: 100%;
+    color:  #dfeaed;
+}
+
+a{
+    text-decoration: none;
+    color:  #dfeaed;
+    font-family: "product sans";
+    margin-left: 15px;
+}
+
+/* ------------------------------------------ menu ----------------------------------- */
+header{
+    height: 100px;
+}
+
+.menu_principal{
+    display: flex;
+    flex-direction: row;
+    align-items: center;
+    justify-content: space-between;
+    height: 100px;
+    width: 100%;
+    background-color: #16347d;
+    z-index: 4;
+ 	position: fixed;
+	top:0px; 
+}
+
+.qeo{
+    font-size: 250%;
+
+}
+
+nav>h1{
+    margin-left: 10%;
+}
+
+.control{
+    position: relative;
+	font-size: 90%;
+	color: #f2f2f2;
+}
+
+.ul_general{
+    display: flex;
+    align-items: center;
+    list-style: none;
+    height: 100%;
+}
+
+.li_general{
+    padding-top: 10%;
+    padding-bottom: 10%;
+    font-size: 100%;
+    transition: padding 0.5s ease;
+    height: 10px;
+    
+}
+
+.li_general:hover{
+    padding-right: 15px;
+} 
+
+.li_servicio{
+    position: relative;
+    width:100%;
+    list-style: none;
+    top:2.5px;
+}
+
+.li_servicio:hover{
+    padding-right: 0px;
+}
+
+.li_servicios{
+    position: relative;
+    padding-top:10px;
+    padding-bottom:10px;
+    list-style: none;
+    top:2.5%
+}
+
+.ul_servicio{
+    position: relative;
+    visibility: hidden;
+    top: 18px;
+    left: auto;
+    right: 117.7px;
+    background-color: #16347d;
+    opacity: 0;
+    width: 175%;
+    height: 250px;
+    list-style: none;
+    border-radius: 10px;
+}
+
+/* .li_general:hover .ul_servicio{
+    visibility: visible;
+    opacity: 1;
+}  */
+
+#flecha{
+    display: none;
+}
+.img_flecha{
+    width: 10%;
+    transition: transform 0.5s ease;
+}
+
+.label_flecha{
+    display: flex;
+    position: relative;
+    font-family: "product sans";
+    font-size: 100%;
+    margin-left: 15px;
+    top: 3px;
+}
+
+/* .label_flecha:hover .img_flecha{
+    transform: rotate(90deg)
+} */
+
+/* ------------------------------------------ fin menu ----------------------------------- */
+video{
+    position: fixed; 
+    left:0;
+    right: 0;
+    width: 100%;
+    height: 100%;
+    object-fit: cover; 
+    z-index: -1;
+    opacity: 0.2;
+}
+
+.bodega{
+	position: fixed;
+	width: fit-content;
+	right: 0;
+    bottom: 0;
+	margin-right: 10px;
+	z-index: 4;
+}
+
+.div_dolar_ws{
+	display: flex;
+	position: relative;
+	width: 70px;
+	margin: 15px 0 15px auto;
+	align-items: center;
+	border-radius: 50px;
+	border-style: -1px;
+	padding: 8px;
+	box-shadow: 1.5px 0 5px #50898a;
+	background-color:  #f2f2f2;;
+    transition: width 0.4s ;
+}
+
+.div_presupuesto>h3{
+    display: none; 
+    opacity: 0;
+} 
+
+.div_presupuesto:hover{
+   width: 250px;
+   transition: width 0.5s ease;
+}
+.div_presupuesto:hover h3{
+   display: flex;
+   opacity: 1;
+   transition: opacity 0.5s ease;
+   margin: 0 30px 0 auto;
+   font-size:150%;
+}
+
+
+#relleno_dolar_ws{
+	fill: #f2f2f2;;
+}
+#imagen_dolar_ws{
+	border-radius: 50%;
+} 
+.Vector , #Vector_2{
+	fill: #16347d;
+} 
+
+.whatsapp{
+	fill: #1db81b;
+} 
+
+#enlace_dolar_ws{
+	position: absolute;
+	left: -12%;
+	width: 100%;
+	height: 100%;
+	border-radius: 50%;
+	border-style: -1px;
+}
+
+.div_dolar_ws:hover .Vector {
+	fill:  #f2f2f2;
+}
+
+.div_dolar_ws:hover #Vector_2 {
+	fill:  #f2f2f2;
+}
+
+.div_dolar_ws:hover #relleno_dolar_ws {
+	fill: #16347d;
+}
+
+.div_dolar_ws:hover  {
+	background-color: #16347d;
+}
+
+.div_whatsapp>h3{
+	display: none; 
+	opacity: 0;
+} 
+
+.div_whatsapp:hover{
+	background-color: #1db81b;
+	width: 250px;
+	transition: width 0.5s ease;
+}
+
+.div_whatsapp:hover h3{
+	display: flex;
+	opacity: 1;
+	transition: opacity 0.5s ease;
+	margin: 0 30px 0 auto;
+	font-size:150%;
+}
+ 
+
+ /* --------------------------------------ficha empresa --------------------------------------*/
+
+
+.organizacion{
+    height: 100%;
+}
+.empresa{
+    height: fit-content;
+    padding-bottom: 5%;
+}
+
+.post{
+    width: 350px;
+    height: 410px;
+    margin: 30px auto 0 auto;
+    background-color: #ededed;
+    color: black;
+    font-family: "product sans";
+    padding: 25px 0 35px 0 ;
+    border-radius: 7px;
+    transition: height 0.5s ease , box-shadow 0.5s ease;
+    text-align: center;
+    
+    
+
+}
+
+article>h1{
+    font-size: 140%;
+}
+article>p{
+    font-size: 110%;
+    line-height: 150%;
+    opacity: 0; 
+    visibility: hidden;
+    transition: visibility 0.5s ease, opacity 0.3s ease ;
+    pointer-events: none;
+}
+
+article>div{
+    height: 250px;
+}
+
+
+.post:hover {
+    height: 650px;
+    box-shadow: 0 0 50px #50898a;
+}
+
+.post:hover p{
+    opacity: 1; 
+    visibility: visible;
+}
+
+#id_peste_control{
+    height: fit-content;
+}
+
+
+#peste_control{
+    width: 350px;
+    height: 300px; 
+    padding-top: 5px;
+
+}
+
+.flecha_abajo{
+    position: relative;
+    top:0%;
+    margin:  0 auto;
+    width: fit-content;
+    transition: top 0.5s ease, transform 0.5s ease; 
+}
+
+.post:hover .flecha_abajo{
+    top: 40%;
+    transform: rotate(180deg);
+} 
+
+
+/* --------------------------------------fin ficha empresa --------------------------------------*/
+
+/* -------------------------------------- ficha mision--------------------------------------------- */
+ 
+#img_mision{
+    width: 100%;
+    height: 100%;
+    padding-top: 5px;;
+}
+
+.post-mision{
+    margin: 30px 0 50px 5%;
+    padding:25px 0 0 0 ;
+    height: 380px;
+}
+#hola{
+    color: black;
+}
+
+.flecha_abajo1{
+    top: 70px;
+}
+
+.post:hover .flecha_abajo1{
+    top: 180px;
+    transform: rotate(180deg);
+} 
+
+.post:hover .flechamision{
+    top: 276px;
+    transform: rotate(180deg);
+}
+
+.post-mision:hover {
+    height: 580px;
+}
+
+
+/* -------------------------------------- fin ficha mision--------------------------------------------- */
+
+/* -------------------------------------- ficha vision--------------------------------------------- */
+
+#img_vision{
+    width: 100%;
+    height: 100%;
+}
+
+.post-vision{
+    margin: 30px auto 50px auto;
+    padding:25px 0 0 0 ;
+    height: 380px;
+}
+
+
+.post-vision:hover {
+    height: 500px;
+}
+
+.mision_vision{
+    display: flex;
+    justify-content: space-between;
+}
+
+/* -------------------------------------- fin ficha vision--------------------------------------------- */
+
+/* -------------------------------------- ficha valores--------------------------------------------- */
+.post-valores{
+    margin: 30px 5% 50px 0;
+    padding:25px 0 0 0 ;
+    height: 380px;
+}
+
+#img_valores{
+    width: 100%;
+    height: 100%;
+}
+
+.post-valores:hover {
+    height: 720px;
+}
+
+.post-valores:hover .flecha_abajo2 {
+    top: 400px;
+    transform: rotate(180deg);
+}
+
+
+/* -------------------------------------- fin ficha valores--------------------------------------------- */
+
+/* -------------------------------------- footer--------------------------------------------- */
+
+footer{
+    margin-top: 100px;
+}
+#contenedor_imagenes{
+        display: flex;
+        width: 100%;
+        align-items: center;
+        background-color: white;
+}
+
+.marcas{
+    margin: 0 auto 0 auto;
+    width: 20%;
+}
+
+
+#syngenta, #byg , #tracker , #bayer , #vevor{
+    width: 100%;
+    margin-top: 40px;
+}
+#byg{
+    width: 70%;
+}
+
+#bayer{
+    width: 35%;
+}
+
+#syngenta{
+    width: 70%;
+}
+
+#tracker{
+    width: 70%;
+}
+
+#derechos{
+    margin-top: 50px;
+    background-color:#16347d;
+    padding: 50px;
+}
+
+#p_derecho{
+    text-align: center;
+    font-family: "product sans";
+    font-size: 120%;
+}
+
+#menu_movil{
+    visibility: hidden;
+}
+
+#menu_movil_label{
+    position: relative;
+    visibility: hidden;
+}
+
+/* -------------------------------------- fin footer--------------------------------------------- */
+#flecha:checked ~ .label_flecha>.img_flecha{
+    transform: rotate(90deg);
+}
+
+
+#menu_movil:checked  ~ .ul_general{
+    visibility: visible;
+}
+ 
+@media  only screen and (max-width:1200px){
+    .mision_vision{
+        display: block;
+    }
+    .post-mision{
+        margin: 30px auto 50px auto;
+    }
+
+    .post-valores{
+        margin: 0 auto;
+    }
+
+    #menu_movil_label{
+        position: absolute;
+        visibility: visible;
+        right: 10%;
+    }
+
+    .menu_principal{
+        height:100px;
+    }
+
+    .qeo{
+        font-size: 200%;
+    
+    }
+     
+    .control{
+        position: relative;
+        font-size: 80%;
+        color: #f2f2f2;
+    }
+    
+
+    .ul_general{
+        position: relative;
+        align-items: none;
+        flex-direction: column;
+        visibility: hidden;
+        width: 200px;
+        height: 186.5px;
+        bottom: -143.9px;
+        right: 0px; 
+        background-color: #16347d;
+        align-items: flex-start;
+    } 
+    #flecha:checked ~ .ul_servicio{
+        width: 100%;
+    } 
+
+    .ul_servicio{
+        position: relative;
+        top: 20px;
+        left: auto;
+        right: 0;
+        background-color: #16347d;
+        opacity: 0;
+        width:100%; 
+        height: 250px;
+        list-style: none;
+        border-radius: 10px;
+    }
+
+    .li_servicios{
+        position: relative;
+        padding-top:10px;
+        padding-bottom:10px;
+        padding-left: 5px;
+        list-style: none;
+        top:2.5%
+    }
+
+    #li_servicio{
+        padding-right: 0px;
+    }
+
+    .li_general:hover{
+        padding-right: 0px;
+    }
+
+    #li_servicio:hover{
+        padding-right: 0px;
+    } 
+
+    .label_flecha{
+        margin-left: 15px;
+    }
+
+    .div_dolar_ws{
+		display: flex;
+		position: relative;
+		width: 50px;
+        height: 50px;
+		margin: 15px 0 15px auto ;
+		align-items: center;
+		border-radius: 50px;
+		border-style: -1px;
+		padding: 8px;
+		box-shadow: 1.5px 0 5px #50898a;
+		background-color:  #f2f2f2;
+		transition: width 0.4s;
+	}
+
+   .div_presupuesto:hover{
+	   width: 50px;
+   }
+   .div_presupuesto:hover h3{
+	   display: none;
+   }
+   
+   #relleno_dolar_ws{
+	   fill: #f2f2f2;
+   }
+
+   .Vector , #Vector_2{
+	   fill: #16347d;
+   } 
+   
+   .whatsapp{
+	   fill: #f2f2f2;
+   }	
+
+
+	.div_dolar_ws:hover .circulo_dolar {
+	   fill:  #16347d;
+   } 
+   
+   .div_dolar_ws:hover #Vector_2 {
+	   fill:  #16347d;
+   }
+   
+   .div_dolar_ws:hover #relleno_dolar_ws {
+	   fill: #f2f2f2;
+   }
+   
+   .div_dolar_ws:hover  {
+	   background-color: #f2f2f2;
+   }
+   
+   .div_whatsapp{
+		background-color: #1db81b
+   } 
+
+   #whatsapp_900:hover{
+	fill: #f2f2f2;
+}
+   
+   .div_whatsapp:hover{
+	   background-color: #1db81b;
+	   width: 50px;
+   }
+   
+   .div_whatsapp:hover h3{
+	   display: none;
+	   opacity: 0;
+   }
+
+.ul_servicio>li>a{
+    display: none;
+}
+
+#menu_movil:checked ~ #menu_movil_label~.ul_general>li>ul{
+    visibility: visible;
+    opacity: 1;
+    background-color: #16347d;
+    width: 100%;
+    height: 100vh;
+}
+
+#flecha:checked ~ .ul_servicio>li>a{
+    display: block;
+    color: #f2f2f2;
+    pointer-events: all;
+}
+	
+}
+@media only screen and (min-width:1200px){
+
+/*     #flecha:checked ~ .ul_servicio{
+		visibility: visible;
+		opacity: 1;
+		background-color: #16347d;
+    }
+      */
+    
+    #flecha:checked ~ .ul_servicio{
+        visibility: visible;
+        top: 18px;
+        left: auto;
+        right: 75%;
+        background-color: #16347d;
+        opacity: 1;
+        width: 175%;
+        height: 250px;
+        list-style: none;
+        border-radius: 0px;
+    }
+
+}
+
+@media only screen and (max-width:900px){
+
+    /*     #flecha:checked ~ .ul_servicio{
+            visibility: visible;
+            opacity: 1;
+            background-color: #16347d;
+        }
+          */
+
+          .div_dolar_ws{
+            display: flex;
+            position: relative;
+            width: 35px;
+            height: 35px;
+            margin: 15px 0 15px auto ;
+            align-items: center;
+            border-radius: 50px;
+            border-style: -1px;
+            padding: 8px;
+            box-shadow: 1.5px 0 5px #50898a;
+            background-color:  #f2f2f2;
+            transition: width 0.4s;
+        }
+
+        .div_whatsapp{
+            background-color: #1db81b
+       } 
+
+}

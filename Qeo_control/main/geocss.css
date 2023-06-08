@@ -1,0 +1,1135 @@
+@font-face {
+    font-family: "hind-bold";
+    src: url("../fuentes/Hind/Hind-Bold.ttf") ;
+}
+
+@font-face {
+    font-family: "hind-regular";
+    src: url("../fuentes/Hind/Hind-Regular.ttf") ;
+}
+
+@font-face {
+    font-family: "hind-light";
+    src: url("../fuentes/Hind/Hind-Light.ttf") ;
+}
+
+*{
+	margin: 0;
+	padding:0px;
+	outline:none;
+	
+}
+	
+html{
+    width: 100%;
+    height: fit-content;
+	font-family: "hind-light";
+	color: #f2f2f2;
+}
+
+
+body{
+	height: 100%;
+	width: 100%;
+	scroll-behavior: smooth;
+
+}
+
+
+.root{
+	--fontsize-clamp-901:clamp(12px,1.5vw,2.2vw);
+	--fontsize-clamp-900:clamp(15px,1.5vw,2.2vw);
+}
+
+a{
+	text-decoration: none;
+	color: #f2f2f2;
+	font-size: 18px;
+	margin-left: 15px;
+}
+
+ul , li{
+	list-style: none;
+	
+}
+
+/*----------------------------------------menu--------------------------------------------*/
+#menu{
+	width: 100%;
+	height: 100px;
+	background-color: #16347d;
+	display: flex;
+	flex-direction: row;
+	align-items: center;
+	justify-content: space-between;
+	z-index: 4;
+ 	position: sticky;
+	top:0px; 
+
+}
+
+.qeo{
+	font-size: 250%;
+
+}
+ 
+.control{
+	position: relative;
+	font-size: 90%;
+	color: #f2f2f2;
+}
+
+
+nav>h1{
+    margin-left: 10%;
+}
+
+.items_total{
+    padding-top: 5%;
+    padding-bottom: 10%;
+    font-size: 100%;
+    transition: padding 0.5s ease;
+	width: 100%;
+    height: 10px;
+} 
+
+.li_inicio{
+	width: 70%;
+}
+
+
+#ul_general{
+	display: flex;
+	flex-direction: row;
+	margin-right: 20px;
+	height: 100%;
+	align-items: center;
+}
+
+#ul_servicios{
+    position: relative;
+    visibility: hidden;
+    top: 20px;
+    left: auto;
+	right: 60%;
+    background-color: #16347d;
+    opacity: 0;
+    width: 178%;
+    height: 250px;
+    list-style: none;
+    border-radius: 10px;
+	
+}
+
+
+/*  #ul_general li:hover #ul_servicios{
+	visibility: visible;
+	opacity: 1;
+}  */
+
+#ul_general li:hover {
+	transition: 0.4s;
+	background-color:#173278;
+	border-bottom:5%;
+	border-color: 2px solid #ffffff; 
+}
+
+
+
+/* .items_total:hover{
+	--transform: rotate(90deg);
+
+} */
+
+#icono_menu_servicio{
+	visibility: hidden;
+	display: none;
+}
+#icono_menu_servicio:checked ~ label>img.flecha{
+	transform: rotate(90deg);
+}
+
+
+
+.items_servicios{
+	padding-bottom:10px;
+	padding-top:10px;
+	
+}
+
+.flecha{
+	position:relative;
+	top: 2.5px;;
+	width: 15px;
+/* 	transform: rotate(0deg);
+	transition-property: transform;
+	transition-duration: 0.4s;	 */
+}
+
+
+/* #inicio , #nosotros ,#servicios ,#contactos{
+	transition: 0.4s;
+} */
+
+#ul_general >li:hover  #inicio {
+	transition: 0.4s;
+	padding-right: 10px;
+}
+
+#ul_general >li:hover  #nosotros{
+	transition: 0.4s;
+	padding-right: 10px;
+}
+
+
+/* #ul_general >li:hover  #servicios{
+	transition: 0.4s;
+	padding-right: 10px;	
+}
+ */
+#ul_general >li:hover  #contactos{
+	transition: 0.4s;
+	padding-right: 10px;
+
+}
+
+/*---------------------------------------- fin menu--------------------------------------------*/
+
+
+/*-------------------------------------------slider----------------------------------------------------*/
+#div_contenedor{
+	height: 40%;
+}
+
+.slider_caras{
+	height: 100%;
+	position: relative;
+	z-index: 1;
+}
+
+.img_slider{
+	width: 100%;
+	max-height: 40%;
+}
+
+
+.prev , .next{
+	cursor: pointer;
+	width:fit-content;
+	padding: 1.5%;
+	color: white;
+	font-weight: bold;
+	font-size: 18px;
+	transition: 0.6s ease;
+	border-radius: 0 3px 3px 0;
+	position: absolute;
+	top: 30%;
+	
+}
+
+.next{
+	right: 0%;
+}
+
+.prev:hover, .next:hover{
+ background-color:rgba(0,0,0,0.8);
+ opacity: 0.5s;
+
+} 
+
+.numero_texto{
+	color:#f2f2f2;
+	font-size:12px;
+	padding:8px 12px;
+	position:absolute;
+	top:0;
+}
+
+
+.fade{
+	-webkit-animation-name:fade;
+	-webkit-animation-duration:1.5s;
+	 animation-name:fade;
+	 animation-duration:1.5s;
+	 display: flex;
+}
+
+@-webkit-keyframes fade{
+ from{opacity:.4}
+ to{opacity:1}
+}
+
+
+
+@keyframes fade{
+ from{opacity:.4}
+ to{opacity:1}
+}
+/*------------------------------------------- fin slider----------------------------------------------------*/
+
+video{
+    position: fixed; 
+    left:0;
+    right: 0;
+    width: 100%;
+    height: 100%;
+    object-fit: cover; 
+    z-index: -1;
+    opacity: 0.1;
+}
+.bodega{
+	position: fixed;
+	width: fit-content;
+	right: 20px;
+	bottom: 0;
+	z-index: 4;
+}
+
+.div_dolar_ws{
+	display: flex;
+	position: relative;
+	width: 70px;
+	margin: 15px 0 15px auto ;
+	align-items: center;
+	border-radius: 50px;
+	border-style: -1px;
+	padding: 8px;
+	box-shadow: 1.5px 0 5px #50898a;
+	background-color:  #f2f2f2;;
+	transition: width 0.4s;
+}
+
+
+.div_presupuesto>h3{
+ 	display: none; 
+	opacity: 0;
+} 
+
+.div_presupuesto:hover{
+	width: 250px;
+	transition: width 0.5s ease;
+}
+.div_presupuesto:hover h3{
+	display: flex;
+	opacity: 1;
+	transition: opacity 0.5s ease;
+	margin: 0 30px 0 auto;
+	font-size:150%;
+}
+
+.div_dolar_ws h3{
+	color: #f2f2f2;
+}
+
+#relleno_dolar_ws{
+	fill: #f2f2f2;;
+}
+#imagen_dolar_ws{
+	border-radius: 50%;
+	/* margin: 0 0 0 auto ; */
+} 
+.Vector , #Vector_2{
+	fill: #16347d;
+} 
+
+.whatsapp{
+	fill: #1db81b;
+} 
+
+#enlace_dolar_ws{
+	position: absolute;
+	left: -12%;
+	width: 100%;
+	height: 100%;
+	border-radius: 50%;
+	border-style: -1px;
+}
+
+.div_dolar_ws:hover .Vector {
+	fill:  #f2f2f2;
+}
+
+.div_dolar_ws:hover #Vector_2 {
+	fill:  #f2f2f2;
+}
+
+.div_dolar_ws:hover #relleno_dolar_ws {
+	fill: #16347d;
+}
+
+.div_dolar_ws:hover  {
+	background-color: #16347d;
+}
+
+.div_whatsapp>h3{
+	display: none; 
+	opacity: 0;
+} 
+
+.div_whatsapp:hover{
+	background-color: #1db81b;
+	width: 250px;
+	transition: width 0.5s ease;
+}
+
+.div_whatsapp:hover h3{
+	display: flex;
+	opacity: 1;
+	transition: opacity 0.5s ease;
+	margin: 0 30px 0 auto;
+	font-size:150%;
+}
+ 
+.frases{
+	display: flex;
+	width: 100%;
+	height: 50%;
+	align-items: center;
+	justify-content: center;
+	margin-top: 50px
+}
+
+#eslogan{
+	background-color:#1a367d;
+	border-radius: 50px;
+	border-style: solid;
+	border-width: 2.5px;
+	padding-top:1%;
+	padding-bottom: 1%;
+	padding-right: 4%;
+	padding-left: 4%;
+	margin-right: 2%;
+	
+}
+
+#eslogan>h1{
+	color:  #f2f2f2;
+	text-align:center;
+
+}
+
+
+#problemas{
+
+	width: fit-content;
+	text-align: center;
+	/* border: 1px solid #315285 ; */
+	box-shadow: 1px 1px 3.5px 1.5px #16347d;
+	border-radius: 50px;
+	padding-top:1%;
+	padding-bottom: 1%;
+	padding-right: 4%;
+	padding-left: 4%;
+	margin-left: 2%;
+	color: black;
+
+}
+
+.frases_ocultas{
+	width: 100%;
+	height: 60%;
+}
+
+#presentacion_servicio{
+	margin-top: 5%;
+	margin-bottom: 2.5%;
+	width: 50%;
+	background-color: #1a367d;
+	color: #f2f2f2;
+	padding-right:50px;
+	padding-left: 50px;
+	padding-top: 10px;
+	padding-bottom: 10px;
+	border-radius: 5px;
+	opacity: 0;
+	border-style: solid; 
+	border-width: 2.5px; 
+	text-align:start;
+
+}
+
+.container_tarjetas{
+	position: relative; 
+	margin: 0 auto;
+	display: flex;
+	overflow-x: scroll;
+	width:65%;
+	height: 20%;
+	scroll-snap-type: x mandatory;
+	scroll-padding: 24px;
+	gap:5px;
+	
+}
+
+.container_tarjetas::-webkit-scrollbar{
+	height: 15px;
+}
+.container_tarjetas::-webkit-scrollbar:vertical{
+	pointer-events: none;
+	display: none;
+}
+  
+.container_tarjetas::-webkit-scrollbar-thumb{
+	background-color: #16347d;
+	border-radius: 5px;
+} 
+
+.container_tarjetas::-webkit-scrollbar-track{
+	background-color: #bddcdc;
+} 
+
+
+
+.container_tarjetas .item{
+	flex:0 0 70%;
+	border-radius: 10px; 
+	scroll-snap-align: start; 
+
+}
+
+.container_tarjetas .item .imagen{
+	width: 95%;
+	height: 100%;
+} 
+
+div.item h1{
+	position: relative;
+	margin-left: 0px;
+	margin-top: 10px;
+	width: fit-content;
+	top: 60px;
+	color: #ffffff;
+	/* border-top: 3px solid #16347d; */
+	border-bottom: 3px solid #16347d;
+
+}
+
+div.item h1>a{
+	width: fit-content;
+	height: fit-content;
+	font-size: 150%;
+}
+
+div.desinfeccion h1>a{
+	color: black;
+}
+
+div.laboratorio h1>a{
+	color: black;
+}
+
+
+
+.animacion_derecha{
+	animation: animacion_derecha 1.5s;
+	
+}
+
+@keyframes animacion_derecha{
+	0%{
+		transform: translateX(-120px);
+		opacity: 0;
+	}
+	50%{
+		transform: translateX(10%);
+		opacity: 1;
+	}
+	100%{
+		transform: translateX(0%);
+		opacity: 1;
+	}
+
+}
+
+
+#presupuesto{
+	display: flex;
+	align-items: center;
+	justify-content: flex-start;
+	margin: 5% 0 5% auto;
+	width: 50%;
+	height: 60px;
+	background-color: #1a367d;
+	color: #f2f2f2;
+	border-radius: 5px;
+	opacity: 0;
+	border-style: solid; 
+	border-width: 2.5px;
+}
+
+#solicitar_presupuesto{
+	margin-left: 20px;
+}
+
+
+.animacion_derecha_uno{
+	animation: animacion_derecha_uno 1.5s ;
+
+	
+}
+
+@keyframes animacion_derecha_uno{
+	0%{
+		transform: translateX(250);
+		opacity: 0;
+	}
+	50%{
+		transform: translateX(-20%);
+		opacity: 1;
+	}
+
+	100%{
+		transform: translateX(0%);
+		opacity: 1;
+	}
+
+}
+
+
+
+
+.animacion_derecha_dos{
+	animation: animacion_derecha_uno 1.5s ;
+
+	
+}
+
+@keyframes animacion_derecha_dos{
+	0%{
+		transform: translateX(-120px);
+		opacity: 0;
+	}
+	100%{
+		transform: translateX(10px);
+		opacity: 1;
+	}
+}
+
+.mascara_puntofijo{
+	width: 100%;
+	padding-top: 5%;
+	padding-bottom: 5%;
+	background-size:100% 100%;
+	background-repeat: no-repeat;
+	background-image: url("https://upload.wikimedia.org/wikipedia/commons/a/ac/Catedral_de_Punto_Fijo_%28Falc%C3%B3n%2C_Venezuela%29.jpg");
+}
+
+#mascara_gas{
+	width:fit-content;
+	height: auto;
+	margin: 10% auto 0 auto;
+	
+}
+
+#mascara{
+	width: 100%;
+	height: auto;
+	border-radius: 50%;
+	
+}
+
+#fondo_puntofijo{
+	width: 100%;
+}
+
+
+#punto_cuide{
+	width: fit-content;
+	margin: 2.5% auto 0 auto;
+	background-color:#1a367d;
+	padding-right: 10%;
+	padding-left: 10%; 
+	padding-top: 0.5%;
+	padding-bottom: 0.5%; 
+	border-radius: 60px;
+	border-style: solid; 
+	border-width: 2.5px;
+	text-align: center;
+}
+
+#h1_punto_cuide{
+	margin: 0 auto;
+	color: #f2f2f2;
+}
+/* -------------------------------------- grid --------------------------------------*/
+
+.section_grid{
+	display: flex;
+	width: 100%;
+	height: fit-content;
+	
+}
+.contenedor_grid{
+	display: grid;
+	grid-template-columns: 50% 50%;
+	grid-template-rows: 50% 50%;
+	width: 100%;
+	height: 90%;
+	background-color: #16347d;
+	margin:10% auto 0 auto;
+
+}
+
+.caja{
+	border: 2px solid  #f2f2f2;;
+	text-align: center;
+}
+
+.caja>ul>li{
+	margin-top: 30px;
+	margin-bottom: 30px;
+	color: #f2f2f2;
+}
+
+
+#lista-c1 , #lista-c2, #lista-c3 , #lista-c4{
+	display: flex;
+	position: relative;
+	z-index: 1;
+	flex-direction: column;
+	text-align:start;
+	pointer-events: none;
+	top: -80%;
+}
+
+#lista-c3 , #lista-c4{
+	display: flex;
+	position: relative;
+	z-index: 1;
+	flex-direction: column;
+	text-align:start;
+	pointer-events: none;
+	top: -97%;
+}
+
+#lista-c1>li , #lista-c2>li, #lista-c3>li , #lista-c4>li{
+	font-size: 150%;
+	margin:0 0 30px 20px;
+}
+
+.capa{
+	position: relative;
+	z-index: 2;
+	background: linear-gradient(180deg, rgba(22,52,125,1) 0%, rgba(32,72,168,1) 51%, rgba(23,70,184,1) 100%);
+	width: 100%;
+	height: 80%;
+	opacity:0.4 ;
+	transition: opacity 0.4s ;
+	
+}  
+
+.capa-abajo{
+	position: relative;
+	z-index: 2;
+	background: linear-gradient(180deg, rgba(23,70,184,1) 30%, rgba(55,91,177,1) 71%, rgba(89,114,176,1) 100%);
+	width: 100%;
+	height: 100%;
+	top:-70px;
+	opacity:0.4 ;
+	transition: opacity 0.4s ;
+}  
+
+.c3>a>div>h2 ,.c4>a>div>h2{
+	position: relative;
+	z-index: 3;
+}
+
+.grid-li>p{
+	color: transparent;
+	text-shadow: 0px 0px 10px #f2f2f2;
+	transition: text-shadow 0.2s;
+}
+
+.c1:hover .capa , .c2:hover .capa,.c3:hover .capa-abajo,.c4:hover .capa-abajo{
+	opacity: 0;
+} 
+
+.c1:hover .grid-li>p,.c2:hover .grid-li>p,.c3:hover .grid-li>p,.c4:hover .grid-li>p{
+	text-shadow: 0px 0px 0px #f2f2f2;
+}	
+/*--------------------------------------- fin grid -----------------------------------*/
+
+.pie-pagina{
+	display: flex;
+	margin: 15% auto 0 auto;
+	padding: 50px 0 50px 0;
+	border-top-color: #16347d;
+	border-top-style: solid;
+	border-top-width: 5px;
+	width:85%;
+	height: auto;
+	justify-content: space-around; 
+
+}
+.pie-pagina>section>div{
+	color: #50898a;
+	opacity: 0.75;
+	font-size: 130%;
+	text-align: center;
+}
+
+#info-legal , #info-contacto{
+	font-size: 150%;
+	color: #16347d;
+	margin-bottom: 10px;
+	font-family: "hind-regular";
+}
+
+#icono_menu{
+	position: relative;
+	left: 35%;
+	width: 5.5%;
+	visibility: hidden;
+	display: none;
+}
+
+
+
+#icono_menu:checked ~ #ul_general{
+	visibility: visible;
+	background-color: #16347d;
+}
+
+
+#label_menu_movil{
+	visibility: hidden;
+}
+
+
+
+@media only screen and (min-width:900px){
+	#icono_menu_servicio:checked ~ #ul_servicios{
+		visibility: visible;
+		opacity: 1;
+		background-color: #16347d;
+	} 
+}
+
+
+@media only screen and (max-width:1380px){
+
+
+	div.c1 .capa , div.c2 .capa{
+		height: 83%;
+	}
+
+}
+
+@media only screen and (max-width:1274px){
+
+	div.c1 .capa , div.c2 .capa{
+		height: 85%;
+	}
+
+}
+
+
+
+@media only screen and (max-width:900px){
+	.qeo{
+		font-size: 200%;
+	
+	}
+	 
+	.control{
+		position: relative;
+		font-size: 80%;
+		color: #f2f2f2;
+	}
+	.items_total{
+		position: relative;
+		left: 0;
+		padding-top: 0%;
+		padding-bottom: 10%;
+		font-size: 100%;
+		height: 20px;
+	} 
+
+	.items_servicios{
+		width: fit-content;
+		margin: 0 0 0 20px ;
+	}
+
+	#ul_general{
+		position: relative;
+		visibility: hidden;
+		flex-direction: column;
+		bottom: -115%;
+		right: 0;
+		margin-right: 0;
+		width: 215px;
+		height: 150%;
+		align-items:flex-start;
+	}
+	#ul_servicios{
+        position: relative;
+        top: 20px;
+        left: auto;
+        right: 0;
+        background-color: #16347d;
+        opacity: 0;
+        width:100%; 
+        height: 100vh;
+        list-style: none;
+        border-radius: 10px;
+	}
+
+	#ul_servicios>li>a{
+		display: none;
+	}
+
+	#icono_menu:checked ~ #label_menu_movil~#ul_general>li>ul{
+		visibility: visible;
+		opacity: 1;
+		background-color: #16347d;
+		width: 100%;
+	}
+	
+	#icono_menu_servicio:checked ~ #ul_servicios>li>a{
+		display: block;
+		color: #f2f2f2;
+		pointer-events: all;
+	}
+
+	#label_menu_movil{
+		visibility: visible;
+		position: relative;
+		right: -35% ;
+	}
+
+	
+/*---------------------------------------------------------slider----------------------------------------------*/
+#div_contenedor{
+	height: 10%;
+}
+/*---------------------------------------------------------slider----------------------------------------------*/
+
+	.container_tarjetas .item .imagen{
+		width: 95%;
+		height: 100%;
+	} 
+	#imagen_dolar_ws{
+		width: 50px;
+		height: 50px;
+	} 
+
+	.frases{
+		flex-direction: column;
+	}
+
+	#eslogan{
+		margin:0 auto 4% auto;
+	}
+
+	#eslogan>h1{
+		font-size: var(--fontsize-clamp-900);
+	}
+
+
+	#problemas{
+		margin-top: 2%;;	
+	}
+
+	#problemas>h2{
+		font-size: var(--fontsize-clamp-900);		
+	}
+
+	.frases_ocultas{
+		justify-content: flex-start;
+		height: 35%;
+	}
+
+/*div contenedor*/
+	#presentacion_servicio{
+		margin: 5% auto 2.5% 0;
+		width: 50%;
+		height: 10px;
+		display: flex;
+		align-items: center;
+	}
+
+	#presupuesto{
+		display: flex;
+		align-items: center;
+		justify-content: flex-start;
+		margin: 2.5% 0 2.5% auto;
+		width: 70%;
+		height: 35px;
+		background-color: #1a367d;
+		color: #f2f2f2;
+		border-radius: 5px;
+		opacity: 0;
+		border-style: solid; 
+		border-width: 2.5px;
+	}
+
+	#solicitar_presupuesto{
+		font-size: var(--fontsize-clamp-900);
+	}
+
+	.container_tarjetas{
+		position: relative; 
+		margin: 0 auto;
+		display: flex;
+		overflow-x: scroll;
+		width:65%;
+		height: 60%;
+		scroll-snap-type: x mandatory;
+		scroll-padding: 24px;
+		gap:5px;
+	}
+
+	div.fumigacion>h1>a, div.desinfeccion>h1>a, div.laboratorio>h1>a, div.asesoria>h1>a ,div.traumatica>h1>a, #mira_servicio ,#solicitar_presupuesto ,#h1_punto_cuide{
+		font-size: 120%;
+		top: 50px;
+	}
+
+	div.fumigacion>h1, div.desinfeccion>h1, div.laboratorio>h1, div.asesoria>h1,div.traumatica>h1, #mira_servicio ,#solicitar_presupuesto ,#h1_punto_cuide{
+		font-size: 110%;
+		top: 40px;
+	}
+
+	#punto_cuide{
+		width: fit-content;
+		font-size: var(--fontsize-clamp-900);
+	}
+
+	#mascara_gas{
+		width: 35%;
+		color: #f2f2f2;
+	}
+
+	.contenedor_grid{
+		grid-template-columns: 100%;
+		grid-template-rows: auto auto auto auto;
+		width: 100%;
+		height: 120%;
+		background-color: #16347d;
+	
+	}
+
+
+	#lista-c1>li , #lista-c2>li, #lista-c3>li, #lista-c4>li{
+		font-size: var(--fontsize-clamp-900);
+	}
+
+	.caja>a>div>h2{
+		font-size: var(--fontsize-clamp-900);
+	}
+	.pie-pagina>div>h1{
+		font-size: var(--sfontsize-clamp-900);
+		color: #f2f2f2;
+	}
+
+	.pie-pagina{
+		display: block;
+	}
+	.pie-pagina>section>div.info-legal{
+		margin:0 10px 0 0;
+	}
+	
+
+	.capa-abajo{
+		top:-55px;
+		opacity:0.4 ;
+		transition: opacity 0.4s ;
+	} 
+
+	div.c1 .capa , div.c2 .capa{
+		height: 82%;
+	}
+
+	
+	#lista-c3, #lista-c4{
+		top:-100%;
+	}
+
+	.div_dolar_ws{
+		display: flex;
+		position: relative;
+		width: 50px;
+		margin: 15px 0 15px auto ;
+		align-items: center;
+		border-radius: 50px;
+		border-style: -1px;
+		padding: 8px;
+		box-shadow: 1.5px 0 5px #50898a;
+		background-color:  #f2f2f2;
+		transition: width 0.4s;
+	}
+
+   .div_presupuesto:hover{
+	   width: 50px;
+   }
+   .div_presupuesto:hover h3{
+	   display: none;
+   }
+   
+   #relleno_dolar_ws{
+	   fill: #f2f2f2;
+   }
+
+   .Vector , #Vector_2{
+	   fill: #16347d;
+   } 
+   
+   .whatsapp{
+	   fill: #f2f2f2;
+   }	
+
+
+	.div_dolar_ws:hover .circulo_dolar {
+	   fill:  #16347d;
+   } 
+   
+   .div_dolar_ws:hover #Vector_2 {
+	   fill:  #16347d;
+   }
+   
+   .div_dolar_ws:hover #relleno_dolar_ws {
+	   fill: #f2f2f2;
+   }
+   
+   .div_dolar_ws:hover  {
+	   background-color: #f2f2f2;
+   }
+   
+   .div_whatsapp{
+		background-color: #1db81b
+   } 
+
+   #whatsapp_900:hover{
+	fill: #f2f2f2;
+}
+   
+   .div_whatsapp:hover{
+	   background-color: #1db81b;
+	   width: 50px;
+   }
+   
+   .div_whatsapp:hover h3{
+	   display: none;
+	   opacity: 0;
+   }
+	
+}
+
+
+@media only screen and (max-width:450px){
+	div.c2 .capa{
+		height: 86%;
+	}
+	div.fumigacion>h1>a, div.desinfeccion>h1>a, div.laboratorio>h1>a, div.asesoria>h1>a ,div.traumatica>h1>a, #mira_servicio ,#solicitar_presupuesto ,#h1_punto_cuide{
+		font-size: 80%;
+		top: 50px;
+		margin-left: 5px;
+	}
+
+	div.fumigacion>h1, div.desinfeccion>h1, div.laboratorio>h1, div.asesoria>h1,div.traumatica>h1, #mira_servicio ,#solicitar_presupuesto ,#h1_punto_cuide{
+		top: 40px;
+	}
+	
+}
+ 
+
+
