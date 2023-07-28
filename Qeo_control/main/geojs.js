@@ -30,7 +30,6 @@ function eventos_prev_next(){
 
 }
 if(window.location.href.split("/")[5]==="index.html"){
-	console.log("holaaaaaaaaaaaaaaaaaaaa")
 
 	
 	
