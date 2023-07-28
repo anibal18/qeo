@@ -13,6 +13,21 @@
     src: url("../fuentes/Hind/Hind-Light.ttf") ;
 }
 
+@font-face {
+    font-family: "JosefinSans-Medium";
+    src: url("../fuentes/static/JosefinSans-Medium.ttf") ;
+}
+
+@font-face {
+    font-family: "JosefinSans-Light";
+    src: url("../fuentes/static/JosefinSans-Light.ttf") ;
+}
+
+
+:root{
+	--mar:clamp(1.5rem , calc(1.5rem + 0.50vw) , 2rem);
+}
+
 *{
 	margin: 0;
 	padding:0px;
@@ -21,10 +36,12 @@
 }
 	
 html{
+	font-size: 16px;
     width: 100%;
     height: fit-content;
-	font-family: "hind-light";
+	font-family: "JosefinSans-Light";
 	color: #f2f2f2;
+	overflow-x: hidden; 
 }
 
 
@@ -45,7 +62,6 @@ a{
 	text-decoration: none;
 	color: #f2f2f2;
 	font-size: 18px;
-	margin-left: 15px;
 }
 
 ul , li{
@@ -54,22 +70,11 @@ ul , li{
 }
 
 /*----------------------------------------menu--------------------------------------------*/
-#menu{
-	width: 100%;
-	height: 100px;
-	background-color: #16347d;
-	display: flex;
-	flex-direction: row;
-	align-items: center;
-	justify-content: space-between;
-	z-index: 4;
- 	position: sticky;
-	top:0px; 
 
-}
 
 .qeo{
-	font-size: 250%;
+	font-size: 200%;
+	font-family: "JosefinSans-Medium";
 
 }
  
@@ -80,118 +85,128 @@ ul , li{
 }
 
 
-nav>h1{
-    margin-left: 10%;
-}
-
-.items_total{
-    padding-top: 5%;
-    padding-bottom: 10%;
-    font-size: 100%;
-    transition: padding 0.5s ease;
+#menu{
 	width: 100%;
-    height: 10px;
-} 
-
-.li_inicio{
-	width: 70%;
+	height: 4em;
+	background-color: #0212a0e8;
+	display: flex;
+	justify-content: space-around;
+	flex-direction: row;
+	align-items: center;
+	z-index: 4;
+ 	position: sticky;
+	top:0px;
 }
-
 
 #ul_general{
 	display: flex;
-	flex-direction: row;
-	margin-right: 20px;
 	height: 100%;
 	align-items: center;
+	box-sizing: border-box;
 }
 
-#ul_servicios{
-    position: relative;
-    visibility: hidden;
-    top: 20px;
-    left: auto;
-	right: 60%;
-    background-color: #16347d;
-    opacity: 0;
-    width: 178%;
-    height: 250px;
-    list-style: none;
-    border-radius: 10px;
+#ul_general>li:hover {
+	transition: 0.1s;
+	border-bottom-color:#ffffff; 
+	border-bottom-width:2.5px;
+	border-bottom-style: solid;
+}
+
+.ul_servicios{
+	display: flex;
+	flex-direction: column;
+	position: absolute;
+	top: -100%;
+	right: 0;
+	width: 17.85vw;
+	background-color:#0212a0e8;
+	width:30%;
+	pointer-events: none;
+	opacity: 0;
+	transition: opacity 0.2s ease , top 0.5s ease;
+
 	
 }
 
-
-/*  #ul_general li:hover #ul_servicios{
-	visibility: visible;
-	opacity: 1;
-}  */
-
-#ul_general li:hover {
-	transition: 0.4s;
-	background-color:#173278;
-	border-bottom:5%;
-	border-color: 2px solid #ffffff; 
-}
-
-
-
-/* .items_total:hover{
-	--transform: rotate(90deg);
-
-} */
-
-#icono_menu_servicio{
-	visibility: hidden;
-	display: none;
-}
-#icono_menu_servicio:checked ~ label>img.flecha{
-	transform: rotate(90deg);
-}
-
-
+.items_total{
+	display: flex;
+	align-items: center;
+    font-size: 100%;
+    transition: padding 0.5s ease;
+    height: 100%;
+	margin:0 var(--mar);
+	width: 100%;
+	cursor: pointer;
+	box-sizing: border-box;
+} 
 
 .items_servicios{
-	padding-bottom:10px;
-	padding-top:10px;
-	
+	height: 80px;
+}
+
+.separador{
+	opacity: 0.2;
+	width: 100%;
+}
+
+.items_servicios:hover{
+	background-color: #0a0840c0;
+}
+
+.separador_hover{
+	opacity: 1;
+	transition: opacity 0.5s ease;
 }
 
 .flecha{
 	position:relative;
 	top: 2.5px;;
 	width: 15px;
-/* 	transform: rotate(0deg);
-	transition-property: transform;
-	transition-duration: 0.4s;	 */
+	transition: transform 0.15s;
+}
+
+.giro{
+	transform: rotate(90deg);
+	transition: transform 0.25s;
+}
+
+.no_invisible{
+	opacity: 1;
+	top:100%;
+	transition: opacity 0.5s ease , top 0.5s ease;
+	pointer-events: all;
+}
+
+#fumigacion, #desinfeccion,#asesorio_tecnica,#laboratorio_tecnico,#limpieza_traumatica{
+	box-sizing: border-box;
+	display: block;
+	width: 100%;
+	height: 100%;
+	padding-top: 20px;
+	padding-left:20px ;
+}
+
+#label_menu_movil{
+	visibility: hidden;
+}
+
+#icono_menu{
+	position: relative;
+	left: 35%;
+	width: 5.5%;
+	visibility: hidden;
+	display: none;
 }
 
 
-/* #inicio , #nosotros ,#servicios ,#contactos{
-	transition: 0.4s;
-} */
 
-#ul_general >li:hover  #inicio {
-	transition: 0.4s;
-	padding-right: 10px;
-}
-
-#ul_general >li:hover  #nosotros{
-	transition: 0.4s;
-	padding-right: 10px;
-}
+#icono_menu:checked ~ #ul_general{
+	visibility: visible;
+	opacity: 1;
+	transition: opacity 0.25s ease;
+} 
 
 
-/* #ul_general >li:hover  #servicios{
-	transition: 0.4s;
-	padding-right: 10px;	
-}
- */
-#ul_general >li:hover  #contactos{
-	transition: 0.4s;
-	padding-right: 10px;
-
-}
 
 /*---------------------------------------- fin menu--------------------------------------------*/
 
@@ -585,26 +600,6 @@ div.laboratorio h1>a{
 
 }
 
-
-
-
-.animacion_derecha_dos{
-	animation: animacion_derecha_uno 1.5s ;
-
-	
-}
-
-@keyframes animacion_derecha_dos{
-	0%{
-		transform: translateX(-120px);
-		opacity: 0;
-	}
-	100%{
-		transform: translateX(10px);
-		opacity: 1;
-	}
-}
-
 .mascara_puntofijo{
 	width: 100%;
 	padding-top: 5%;
@@ -775,38 +770,8 @@ div.laboratorio h1>a{
 	font-family: "hind-regular";
 }
 
-#icono_menu{
-	position: relative;
-	left: 35%;
-	width: 5.5%;
-	visibility: hidden;
-	display: none;
-}
-
-
-
-#icono_menu:checked ~ #ul_general{
-	visibility: visible;
-	background-color: #16347d;
-}
-
-
-#label_menu_movil{
-	visibility: hidden;
-}
-
-
-
-@media only screen and (min-width:900px){
-	#icono_menu_servicio:checked ~ #ul_servicios{
-		visibility: visible;
-		opacity: 1;
-		background-color: #16347d;
-	} 
-}
-
-
 @media only screen and (max-width:1380px){
+
 
 
 	div.c1 .capa , div.c2 .capa{
@@ -826,76 +791,41 @@ div.laboratorio h1>a{
 
 
 @media only screen and (max-width:900px){
-	.qeo{
-		font-size: 200%;
-	
-	}
-	 
+
+/* ----------------------------menu-------------------------------- */	
+ 
 	.control{
 		position: relative;
 		font-size: 80%;
 		color: #f2f2f2;
 	}
-	.items_total{
-		position: relative;
-		left: 0;
-		padding-top: 0%;
-		padding-bottom: 10%;
-		font-size: 100%;
-		height: 20px;
+
+  	.items_total{
+		justify-content: center;
 	} 
 
-	.items_servicios{
-		width: fit-content;
-		margin: 0 0 0 20px ;
-	}
-
 	#ul_general{
-		position: relative;
+		position: absolute;
 		visibility: hidden;
-		flex-direction: column;
-		bottom: -115%;
+		opacity: 0;
+		transition: opacity 0.25s ease;
+		bottom: -100%;
 		right: 0;
 		margin-right: 0;
-		width: 215px;
-		height: 150%;
-		align-items:flex-start;
-	}
-	#ul_servicios{
-        position: relative;
-        top: 20px;
-        left: auto;
-        right: 0;
-        background-color: #16347d;
-        opacity: 0;
-        width:100%; 
-        height: 100vh;
-        list-style: none;
-        border-radius: 10px;
-	}
-
-	#ul_servicios>li>a{
-		display: none;
-	}
-
-	#icono_menu:checked ~ #label_menu_movil~#ul_general>li>ul{
-		visibility: visible;
-		opacity: 1;
-		background-color: #16347d;
 		width: 100%;
+		align-items:flex-start;
+		background-color:#0212a0e8;
 	}
-	
-	#icono_menu_servicio:checked ~ #ul_servicios>li>a{
-		display: block;
-		color: #f2f2f2;
-		pointer-events: all;
-	}
+
+ 	.ul_servicios{
+		width: 45%;
+	} 
 
 	#label_menu_movil{
 		visibility: visible;
-		position: relative;
-		right: -35% ;
 	}
+
+/* ----------------------------fin menu-------------------------------- */	
 
 	
 /*---------------------------------------------------------slider----------------------------------------------*/

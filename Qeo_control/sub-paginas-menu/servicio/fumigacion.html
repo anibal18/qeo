@@ -8,7 +8,53 @@
     <title>Qeo Control</title>
 </head>
 <body>
-    <video src="../../mp4/humo.mp4" autoplay="true" loop="true"></video> 
+
+    <!-- --------------------------------- inicio menu---------------------------------------- -->
+	<nav id="menu" class="#">
+		<h1> <span class="qeo ">Qeo</span><span class="control">control</span></h1>
+		<input type="checkbox" id="icono_menu">
+		<label for="icono_menu" id="label_menu_movil">
+			<img src="../../svg/bx-menu.svg" >
+		</label>
+
+		<ul id="ul_general">
+			
+			<li class="items_total ">
+				<a href="../../main/index.html" id="inicio">Inicio</a>
+			</li>
+			<li class="items_total">
+				<a href="../nosotros.html" id="nosotros">Nosotros</a>
+			</li>
+			<li class="items_total" id="li_servicios">
+				<a id="servicios">Servicios</a>
+ 				<img src="../../svg/flechaderecha.svg" class="flecha">
+				<ul class="ul_servicios">
+ 					<li  class="items_servicios" id="li_fumigacion">
+						<a href="./fumigacion.html"  id="fumigacion" class="a_items_servicios">Fumigación</a>	
+					</li> 
+					<hr class="separador">
+ 					<li class="items_servicios">
+						<a href="./desinfeccion.html"  id="desinfeccion" class="a_items_servicios">Desinfección</a>
+					</li>
+					<hr class="separador">
+					<li class="items_servicios">
+						<a href="./asesoria_tecnica.html"  id="asesorio_tecnica" class="a_items_servicios">Asesoria tecnica</a>
+					</li>
+					<hr class="separador">
+					<li class="items_servicios">
+						<a href="./laboratorio.html"  id="laboratorio_tecnico" class="a_items_servicios">Laboratorio Tecnico</a>
+					</li>
+					<hr class="separador">
+					<li class="items_servicios">
+						<a href="./limpieza.html"  id="limpieza_traumatica" class="a_items_servicios">Limpieza traumatica</a>
+					</li>  
+				</ul>
+			</li>
+		</ul>
+	</nav>
+
+<!-- --------------------------------- fin menu---------------------------------------- -->
+<!--     <video src="../../mp4/humo.mp4" autoplay="true" loop="true"></video> 
     <header>
         <nav class="menu_principal">        
             <h1> <span class="qeo ">Qeo</span><span class="control">control</span></h1>
@@ -48,7 +94,7 @@
             </ul>
         </nav>
     </header>
-
+ -->
     <section class="bodega">
 		
 		<div class="div_dolar_ws div_presupuesto">
@@ -118,4 +164,5 @@
         </section>
     </footer>
 </body>
+<script src="../../main/geojs.js"></script>
 </html>
