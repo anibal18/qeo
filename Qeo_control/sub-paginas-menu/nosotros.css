@@ -205,38 +205,30 @@ ul , li{
 }
 
 /* ------------------------------------------ fin menu ----------------------------------- */
-video{
-    position: fixed; 
-    left:0;
-    right: 0;
-    width: 100%;
-    height: 100%;
-    object-fit: cover; 
-    z-index: -1;
-    opacity: 0.2;
-}
 
 .bodega{
-	position: fixed;
+    position: fixed;
 	width: fit-content;
-	right: 0;
-    bottom: 0;
-	margin-right: 10px;
+	right: 20px;
+	bottom: 0;
 	z-index: 4;
+	box-sizing: border-box;
 }
 
 .div_dolar_ws{
-	display: flex;
+    display: flex;
 	position: relative;
-	width: 70px;
-	margin: 15px 0 15px auto;
+	width: 60px;
+	height: 60px;
+	margin: 15px 0 15px auto ;
 	align-items: center;
 	border-radius: 50px;
 	border-style: -1px;
+	box-sizing: border-box;
 	padding: 8px;
 	box-shadow: 1.5px 0 5px #50898a;
 	background-color:  #f2f2f2;;
-    transition: width 0.4s ;
+	transition: width 0.4s;
 }
 
 .div_presupuesto>h3{
@@ -253,16 +245,21 @@ video{
    opacity: 1;
    transition: opacity 0.5s ease;
    margin: 0 30px 0 auto;
-   font-size:150%;
+   font-size:1.2rem ;
 }
 
 
 #relleno_dolar_ws{
 	fill: #f2f2f2;;
 }
+
 #imagen_dolar_ws{
-	border-radius: 50%;
+    border-radius: 50%;
+    width: 40px;
+    height: 40px;
+    margin: auto auto;
 } 
+
 .Vector , #Vector_2{
 	fill: #16347d;
 } 
@@ -312,7 +309,7 @@ video{
 	opacity: 1;
 	transition: opacity 0.5s ease;
 	margin: 0 30px 0 auto;
-	font-size:150%;
+	font-size:1.2rem ;
 }
  
 

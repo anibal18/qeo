@@ -9,11 +9,14 @@ let $flecha=document.querySelector(".flecha");
 let $ul_servicios=document.querySelector(".ul_servicios");
 let $separador=document.querySelectorAll(".separador");
 let $items_servicios=document.querySelectorAll(".items_servicios");
+let $slides=document.getElementsByClassName("slider_caras");
 let corte_de_tiempo;
 
 console.log(window.location.href.split("/")[5])
 
-function eventos_prev_next(){
+
+
+function eventos(){
 	if(window.location.href.split("/")[5]==="index.html"){
 		prev.addEventListener("click" , mover_prev);
 		$next.addEventListener("click" , mover_next);
@@ -23,9 +26,6 @@ function eventos_prev_next(){
 	$items_servicios.forEach(i=>{
 		i.addEventListener("mouseover" , delineado);
 		i.addEventListener("mouseout" , delineado);
-		if(i){
-			return Array.from($items_servicios).indexOf(i);
-		}
 	})
 
 }
@@ -34,22 +34,16 @@ if(window.location.href.split("/")[5]==="index.html"){
 	
 	
 	function showSlides(){
-	
-		let i;
-		let slides=document.getElementsByClassName("slider_caras");
-	
-	
-	
-		for (i=0 ; i<slides.length ; i++){
-			slides[i].style.display="none";
+		for (i=0 ; i<$slides.length ; i++){
+			$slides[i].style.display="none";
 	
 		}
 	
-		slides[slideindex].style.display="flex";
+		$slides[slideindex].style.display="flex";
 		slideindex_1=slideindex;
 		slideindex++;
 	
-		if(slideindex>slides.length-1){
+		if(slideindex>$slides.length-1){
 			if(slideindex==3){
 				bandera=true;
 			}
@@ -58,9 +52,7 @@ if(window.location.href.split("/")[5]==="index.html"){
 		};
 	
 	
-		corte_de_tiempo=setTimeout(showSlides,2000);
-	
-	
+		corte_de_tiempo=setTimeout(showSlides,5000);
 	
 	}
 	
@@ -75,7 +67,9 @@ if(window.location.href.split("/")[5]==="index.html"){
 				clearTimeout(corte_de_tiempo);
 				corte_de_tiempo=setTimeout(showSlides , 100);
 	
-			}
+		}
+
+
 	
 		
 	}
@@ -83,6 +77,7 @@ if(window.location.href.split("/")[5]==="index.html"){
 	function mover_next(){
 		clearTimeout(corte_de_tiempo);
 		corte_de_tiempo=setTimeout(showSlides , 100);
+		console.log("fin")
 	}
 }
 
@@ -119,5 +114,5 @@ function delineado(e){
 if(window.location.href.split("/")[5]==="index.html"){
 	showSlides();
 }
-eventos_prev_next();
+eventos();
 
